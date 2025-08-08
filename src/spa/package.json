@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "ts-loader": "^9.5.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "axios": "^1.11.0",
+    "ol": "^10.6.1",
+    "react-router-dom": "^7.7.0"
+  }
+}

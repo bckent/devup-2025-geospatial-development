@@ -1,0 +1,49 @@
+## React/TypeScript/Webpack SPA .gitignore
+# Node modules and dependencies
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log*
+
+# Build and output directories
+dist/
+build/
+out/
+coverage/
+
+# Webpack and TypeScript
+*.tsbuildinfo
+.parcel-cache/
+.next/
+.cache/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+debug.log
+
+# OS-specific
+Thumbs.db
+ehthumbs.db
+.DS_Store
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Misc
+*.tgz
+
+# Keep Visual Studio ignores if using VS for development
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+mono_crash.*
+[Dd]ebug/

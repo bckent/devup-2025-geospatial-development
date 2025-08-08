@@ -1,0 +1,67 @@
+{
+	"folders": [
+		{
+			"name": "api",
+			"path": "../api"			
+		},
+		{
+			"name": "spa",
+			"path": "../spa"
+		}
+	],
+	"settings": {
+		"debug.internalConsoleOptions": "neverOpen"		
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+			  "type": "node",
+			  "request": "launch",
+			  "name": "Launch Web Server",
+			  "program": "${workspaceFolder}/app.js",
+      		  "cwd": "${workspaceFolder}",
+			  "env": {
+				"NODE_ENV": "development"
+			  },
+			  "console": "integratedTerminal",
+			  "runtimeExecutable": "node",
+			  "preLaunchTask": "NPX Webpack Compile"
+			}
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"type": "shell",
+				"command": "npm install",            
+				"label": "NPM Install for API",
+				"detail": "Install dependencies from package",
+				"options": {
+					"cwd": "${workspaceFolder:api}"
+                },
+			},
+			{
+				"type": "shell",
+				"command": "npm install",            
+				"label": "NPM Install for SPA",
+				"detail": "Install dependencies from package",
+				"dependsOn": [ "NPM Install for API" ],
+				"options": {
+                    "cwd": "${workspaceFolder:spa}"
+                },
+			},
+			{
+				"type": "shell",
+				"command": "npx webpack --mode development",            
+				"label": "NPX Webpack Compile",
+				"detail": "Compiles TypeScript using Webpack",
+				"dependsOn": [ "NPM Install for SPA" ],
+				"options": {
+                    "cwd": "${workspaceFolder:spa}"
+                },
+			}
+		]
+	}
+}
